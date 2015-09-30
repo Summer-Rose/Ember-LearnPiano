@@ -1,5 +1,9 @@
-<ul>
+<h1>Tips &amp; Tricks</h1>
+
+<div>
   {{#each model as |tip|}}
-     <li>{{tip.author}}'s {{tip.title}}</li>
+    {{tip-tile tip=tip destroyArticle="destroyArticle"}}
   {{/each}}
-</ul>
+</div>
+
+<button class="btn btn-success">Add Tip or Trick</button>
