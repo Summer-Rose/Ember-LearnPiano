@@ -1,0 +1,10 @@
+<h3><a {{action 'articleShow'}}>{{tip.title}}<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></h3>
+<p>By {{tip.author}}</p>
+{{#if isArticleShowing}}
+  <div id="article">
+    <p>{{tip.description}}</p>
+    <a {{action 'articleHide'}}><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></a>
+    <a {{action 'destroyArticle' tip}}><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+    <a {{action 'destroyArticle' tip}}><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>
+  </div>
+{{/if}}
