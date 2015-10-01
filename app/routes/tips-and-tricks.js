@@ -5,7 +5,18 @@ export default Ember.Route.extend({
     return this.store.findAll('tip');
   },
 
+  isFormShowing: false,
+
   actions: {
+    save(params) {
+      var newTip = this.store.createRecord('tip', params);
+      newTip.save();
+      this.transitionTo('tips-and-tricks');
+    },
+    update(tip, params) {
+      rental.save();
+      this.transitionTo('tips-and-tricks');
+    }
     destroyArticle(tip) {
       tip.destroyRecord();
       this.transitionTo('tips-and-tricks');
