@@ -1,0 +1,16 @@
+{{#if addNewTip}}
+<form>
+  <div class="form-group">
+    {{input value=title id="title"}}
+  </div>
+  <div class="form-group">
+    {{input value=author id="author"}}
+  </div>
+  <div class="form-group">
+    {{input value=description id="description"}}
+  </div>
+  <button {{action 'save'}}class="btn btn-primary btn-lg">Add Tip or Trick</button>
+</form>
+{{else}}
+<button {{action 'tipFormShow'}}>Add New Tip &amp; Trick</button>
+{{/if}}
