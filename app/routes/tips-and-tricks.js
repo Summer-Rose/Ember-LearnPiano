@@ -16,7 +16,7 @@ export default Ember.Route.extend({
     update(tip, params) {
       rental.save();
       this.transitionTo('tips-and-tricks');
-    }
+    },
     destroyArticle(tip) {
       tip.destroyRecord();
       this.transitionTo('tips-and-tricks');
